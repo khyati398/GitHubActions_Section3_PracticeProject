@@ -7,4 +7,4 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Output of issue
-              run: echo "Title - ${{ toJson(github).issue.title }}, Message - ${{ toJson(github).issue.body }} & Username - ${{ toJson(github).issue.user.login }}"
+              run: echo "Title - ${{ toJson(github.issue.title) }}, Message - ${{ toJson(github.issue.body) }} & Username - ${{ toJson(github.issue.user.login) }}"
