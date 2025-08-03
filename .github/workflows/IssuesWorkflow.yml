@@ -1,0 +1,10 @@
+name: Issues Workflow
+on: 
+    issues:
+        types: [opened, edited]
+jobs:
+    Issue-Details:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Output of issue
+              run: echo "${{ github }}"
