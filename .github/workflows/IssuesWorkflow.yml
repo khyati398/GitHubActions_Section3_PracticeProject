@@ -1,6 +1,6 @@
 name: Issues Workflow
 on: 
-    issues:
+    issues: #Triggering event is 'issues' and type is 'opened OR edited', means whenever issue is opened or edited, workflow will be triggered.
         types: [opened, edited]
 jobs:
     Issue-Details:
@@ -8,3 +8,6 @@ jobs:
         steps:
             - name: Output of issue
               run: echo "Title - ${{ github.event.issue.title }}, Message - ${{ github.event.issue.body }} & Username - ${{ github.event.issue.user.login }}"
+
+#Note: Here, ${{ }} represents expressions. They are used to dynamically pick values when workflow is executed.
+#Note: GitHub actions contains metadata of workflows which is called as "Contexts", you can read about available contexts in documentations by searching 'github actions contexts'. Here, 'github' is one of the available contexts and we are accessing different properties/sub-data present in github context. You could also write as ${{ toJson(github) }}
