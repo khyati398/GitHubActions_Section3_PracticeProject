@@ -1,3 +1,4 @@
+#This one is to run the workflow whenever issue is opened and edited. It also covers 'contexts' and 'expressions' concept
 name: Issues Workflow
 on: 
     issues: #Triggering event is 'issues' and type is 'opened OR edited', means whenever issue is opened or edited, workflow will be triggered.
